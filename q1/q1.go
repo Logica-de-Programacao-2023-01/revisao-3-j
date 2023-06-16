@@ -8,5 +8,15 @@ package q1
 //Você pode retornar a resposta em qualquer ordem.
 
 func TwoSum(nums []int, target int) []int {
-	return nil
+	var answer []int
+	for i := 0; i < len(nums); i++ {
+		for j := i + 1; j < len(nums); j++ {
+			if nums[i]+nums[j] == target {
+				answer = append(answer, i)
+				answer = append(answer, j)
+				break
+			}
+		}
+	}
+	return answer
 }
